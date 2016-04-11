@@ -1,0 +1,20 @@
+{
+  "name": "waylaidwanderer/php-rotatingproxymanager",
+  "description": "A PHP library you can use to select proxies in a rotation.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joel",
+      "email": "waylaidwanderer@live.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "waylaidwanderer\\RotatingProxyManager\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4"
+  }
+}
