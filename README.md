@@ -1,5 +1,9 @@
 # PHP-RotatingProxyManager
-A PHP library you can use to select proxies in a rotation.
+A PHP library you can use to select proxies in a rotation. It uses SQLite to store proxy data so you can use multiple instances of `RotatingProxyManager` across multiple scripts and it will still work. Requires the SQLite extension for PHP to be installed.
+
+# Installation
+
+`composer require waylaidwanderer/php-rotatingproxymanager dev-master`
 
 # Usage
 
@@ -14,7 +18,8 @@ A PHP library you can use to select proxies in a rotation.
         $list[] = $rotatingProxy;
     }
     
-    $proxyManager = new RotatingProxyManager($list);
+    $databaseFileLocation = __DIR__;
+    $proxyManager = new RotatingProxyManager($list, $databaseFileLocation);
     $proxyToUse = $proxyManager->getNextProxy();
     var_dump($proxyToUse->getUsername());
     var_dump($proxyToUse->getPassword());
