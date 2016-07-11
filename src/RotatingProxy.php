@@ -102,9 +102,9 @@ class RotatingProxy
     {
         $output = "";
         if ($this->username) {
-            $output .= $this->username;
+            $output .= $this->username . ':';
             if ($this->password) {
-                $output .= ":" . $this->password;
+                $output .= $this->password;
             }
             $output .= "@";
         }
