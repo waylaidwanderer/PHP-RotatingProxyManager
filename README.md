@@ -3,7 +3,7 @@ A PHP library you can use to select proxies in a rotation. It uses SQLite to sto
 
 # Installation
 
-`composer require waylaidwanderer/php-rotatingproxymanager dev-master`
+`composer require waylaidwanderer/php-rotatingproxymanager`
 
 # Usage
 
