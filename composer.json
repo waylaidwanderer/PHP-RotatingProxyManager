@@ -15,7 +15,7 @@
     }
   },
   "require": {
-    "ext-sqlite3": "*"
+    "ext-pdo_sqlite": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "~5"

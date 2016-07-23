@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Joel
- * Date: 2016-07-11
- * Time: 2:36 AM
- */
-
 namespace waylaidwanderer\RotatingProxyManager;
 
 
