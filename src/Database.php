@@ -13,12 +13,13 @@ class Database
 
     private function initializeDatabase($dbFileName, $newInstance)
     {
-        if ($newInstance && file_exists($dbFileName)) {
+        $fileExists = file_exists($dbFileName);
+        if ($newInstance && $fileExists) {
             unlink($dbFileName);
         }
         $db = new \PDO('sqlite:'.$dbFileName);
         $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        if ($newInstance || !file_exists($dbFileName)) {
+        if ($newInstance || !$fileExists) {
             $db->exec('CREATE TABLE `proxies` (
                          `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                          `proxy` text NOT NULL,
